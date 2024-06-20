@@ -38,5 +38,13 @@ export default {
 button {
   margin: 0 10px;
   padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Add rounded corners */
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 </style>

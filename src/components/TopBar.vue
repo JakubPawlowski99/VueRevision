@@ -1,7 +1,7 @@
 <template>
   <div class="top-bar">
+    <img :src="logo" alt="Logo" class="logo"/>
     <h1>TEMPORARY NAME</h1>
-     <img src="@/assets/logo.png" alt="Logo" class="logo"/>
     <select>
       <option disabled selected>Select a category</option>
       <!-- Categories will be populated here later -->
@@ -12,7 +12,12 @@
 
 <script>
 export default {
-  name: 'TopBar'
+  name: 'TopBar',
+  data() {
+    return {
+      logo: require('../assets/logo.png')
+    };
+  }
 }
 </script>
 
@@ -35,5 +40,9 @@ h1 {
 select, input[type="text"] {
   margin-left: 10px;
   padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Add rounded corners */
+  outline: none;
 }
+
 </style>
