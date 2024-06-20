@@ -2,13 +2,14 @@ const express = require('express');
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path'); // Import path module
 
 const app = express();
 const port = 3000;
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static('public')); // Serve static files from the public directory
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from the 'public' directory
 
 const db = mysql.createConnection({
   host: 'localhost',
